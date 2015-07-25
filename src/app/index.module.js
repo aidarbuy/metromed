@@ -8,6 +8,7 @@ import MainController from './main/main.controller';
 import GithubContributorService from '../app/components/githubContributor/githubContributor.service';
 import WebDevTecService from '../app/components/webDevTec/webDevTec.service';
 import NavbarDirective from '../app/components/navbar/navbar.directive';
+import NavbarController from '../app/components/navbar/navbar.controller';
 import MalarkeyDirective from '../app/components/malarkey/malarkey.directive';
 
 angular.module('metromed', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial'])
@@ -22,5 +23,6 @@ angular.module('metromed', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
   .controller('MainController', MainController)
+  .controller('NavbarController', NavbarController)
   .directive('acmeNavbar', () => new NavbarDirective())
   .directive('acmeMalarkey', () => new MalarkeyDirective(malarkey));

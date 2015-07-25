@@ -1,46 +1,93 @@
 <!doctype html>
 <html ng-app="metromed">
-  <head>
-    <meta charset="utf-8">
-    <title>metromed</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<head>
+		<meta charset="utf-8">
+		<title>metromed</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
+		<!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+		<!-- bower:css -->
+		<!-- run `gulp inject` to automatically populate bower styles dependencies -->
+		<!-- endbower -->
+		<!-- endbuild -->
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+		<!-- build:css({.tmp/serve,src}) styles/app.css -->
+		<!-- inject:css -->
+		<!-- css files will be automatically insert here -->
+		<!-- endinject -->
+		<!-- endbuild -->
+	</head>
+	<body>
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-    <div ui-view></div>
 
-    <!-- build:js(src) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- run `gulp inject` to automatically populate bower script dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
+		<div layout="column" ng-controller="NavbarController as nav">
+			<div layout="row" layout-fill>
+				<!-- Side Navigation -->
+				<md-sidenav layout-align="start start" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+					<md-toolbar class="md-theme-indigo">
+        		<h1 class="md-toolbar-tools">
+							<md-button aria-label="Settings" class="md-icon-button" ng-click="nav.toggleSidenav('left')" hide-gt-md>
+								<md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+							</md-button>
+							&nbsp;Menu
+        		</h1>
+      		</md-toolbar>
+      		<!-- Menu items -->
+					<md-content flex layout="column" layout-align="start start">
+						<div layout-align="start start">Home</div>
+						<md-button layout-align="start start">Home</md-button>
+						<md-button>About Us</md-button>
+						<md-button ng-click="nav.toggleSidenav('left')" class="md-primary" hide-gt-md>
+							Close Menu
+						</md-button>
+					</md-content>
+				</md-sidenav>
+				
+				<div layout="column" flex>
+					<md-toolbar>
+						<div class="md-toolbar-tools">
+							<md-button aria-label="Settings" class="md-icon-button" ng-click="nav.toggleSidenav('left')" hide-gt-md>
+								<md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+							</md-button>
+							
+							<span flex></span>
+							<h2>MetroMed Urgent Care</h2>
+							<span flex></span>
+							
+							<md-button class="md-icon-button" aria-label="More">
+								<md-icon md-svg-icon="assets/icons/more_vert.svg"></md-icon>
+							</md-button>
+						</div>
+					</md-toolbar>
+						
+					<md-content id="container">
+						<div ui-view></div>
+					</md-content>
+				</div>
+			</div>
+		</div>
 
-    <!-- build:js({.tmp/serve,.tmp/partials}) scripts/app.js -->
-    <!-- inject:js -->
-    <!-- js files will be automatically insert here -->
-    <!-- endinject -->
 
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
-    <!-- endinject -->
-    <!-- endbuild -->
+		<!-- build:js(src) scripts/vendor.js -->
+		<!-- bower:js -->
+		<!-- run `gulp inject` to automatically populate bower script dependencies -->
+		<!-- endbower -->
+		<!-- endbuild -->
 
-  </body>
+		<!-- build:js({.tmp/serve,.tmp/partials}) scripts/app.js -->
+		<!-- inject:js -->
+		<!-- js files will be automatically insert here -->
+		<!-- endinject -->
+
+		<!-- inject:partials -->
+		<!-- angular templates will be automatically converted in js and inserted here -->
+		<!-- endinject -->
+		<!-- endbuild -->
+
+	</body>
 </html>
