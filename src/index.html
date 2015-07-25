@@ -19,59 +19,43 @@
 		<!-- endinject -->
 		<!-- endbuild -->
 	</head>
-	<body>
+	<body layout="column" ng-controller="ToolbarController as tb">
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-
-		<div layout="column" ng-controller="NavbarController as nav">
-			<div layout="row" layout-fill>
-				<!-- Side Navigation -->
-				<md-sidenav layout-align="start start" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-					<md-toolbar class="md-theme-indigo">
-        		<h1 class="md-toolbar-tools">
-							<md-button aria-label="Settings" class="md-icon-button" ng-click="nav.toggleSidenav('left')" hide-gt-md>
-								<md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+		<!-- Toolbar -->
+		<md-toolbar layout="row">
+			<md-button ng-click="tb.toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
+				<md-icon aria-label="Menu" md-svg-icon="assets/icons/menu.svg"></md-icon>
+			</md-button>
+			<h1 class="md-toolbar-tools">MetroMed Urgent Care</h1>
+		</md-toolbar>
+		<!-- Content Wrapper -->
+		<div layout="row" flex class="content-wrapper">
+			<!-- Side Navigation -->
+			<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('sm')">
+				<md-list class="muppet-list">
+					<!-- Menu items -->
+					<md-item ng-repeat="item in tb.menuItems">
+						<md-item-content>
+							<md-button aria-label="Home" class="selected">
+								<!-- <img ng-src="assets/images/photo.jpg" class="face" alt="Home"> -->
+								<md-icon md-svg-src="{{ item.icon }}"aria-label="menu icon"></md-icon>
+								{{ item.name }}
 							</md-button>
-							&nbsp;Menu
-        		</h1>
-      		</md-toolbar>
-      		<!-- Menu items -->
-					<md-content flex layout="column" layout-align="start start">
-						<div layout-align="start start">Home</div>
-						<md-button layout-align="start start">Home</md-button>
-						<md-button>About Us</md-button>
-						<md-button ng-click="nav.toggleSidenav('left')" class="md-primary" hide-gt-md>
-							Close Menu
-						</md-button>
-					</md-content>
-				</md-sidenav>
-				
-				<div layout="column" flex>
-					<md-toolbar>
-						<div class="md-toolbar-tools">
-							<md-button aria-label="Settings" class="md-icon-button" ng-click="nav.toggleSidenav('left')" hide-gt-md>
-								<md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
-							</md-button>
-							
-							<span flex></span>
-							<h2>MetroMed Urgent Care</h2>
-							<span flex></span>
-							
-							<md-button class="md-icon-button" aria-label="More">
-								<md-icon md-svg-icon="assets/icons/more_vert.svg"></md-icon>
-							</md-button>
-						</div>
-					</md-toolbar>
-						
-					<md-content id="container">
-						<div ui-view></div>
-					</md-content>
-				</div>
+						</md-item-content>
+					</md-item>
+					<md-divider></md-divider>
+				</md-list>
+			</md-sidenav>
+			<!-- Content -->
+			<div layout="column" flex class="content-wrapper" id="primary-col">
+				<md-content layout="column" flex class="md-padding">
+					<div ui-view></div>
+				</md-content>
 			</div>
 		</div>
-
 
 		<!-- build:js(src) scripts/vendor.js -->
 		<!-- bower:js -->

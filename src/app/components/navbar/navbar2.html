@@ -1,0 +1,755 @@
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" tabindex="-1">
+
+    <header class="nav-header">
+      <a ng-href="#/" class="docs-logo" href="#/">
+        <img src="img/icons/angular-logo.svg" alt="">
+        <h1 class="docs-logotype md-heading">Angular Material</h1>
+      </a>
+    </header>
+
+    <ul class="skip-links">
+      <li class="md-whiteframe-z2">
+        <a class="md-button md-default-theme" ng-transclude="" ng-click="focusMainContent($event)" href="#" tabindex="0"><span class="ng-scope">Skip to content</span></a>
+      </li>
+    </ul>
+
+    <md-content flex="" role="navigation" class="md-default-theme">
+      <ul class="docs-menu">
+        <!-- ngRepeat: section in menu.sections --><li ng-repeat="section in menu.sections" class="parent-list-item version-picker" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <!-- ngIf: section.type === 'heading' --><h2 class="menu-heading md-subhead ng-binding ng-scope" ng-if="section.type === 'heading'" id="heading_DocumentationVersion">
+            Documentation Version
+          </h2><!-- end ngIf: section.type === 'heading' -->
+          <!-- ngIf: section.type === 'link' -->
+
+          <!-- ngIf: section.type === 'toggle' -->
+
+          <!-- ngIf: section.children --><ul ng-if="section.children" class="menu-nested-list ng-scope">
+            <!-- ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-LatestRelease(0.10.0)" aria-expanded="false" tabindex="0" aria-describedby="heading_DocumentationVersion">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Latest Release (0.10.0)
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+        
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-LatestRelease(0.10.0)" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/HEAD" ng-click="focusSection()" tabindex="0" href="/HEAD"><span class="ng-binding ng-scope">
+  HEAD (master)
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.10.1-rc3" ng-click="focusSection()" tabindex="0" href="/0.10.1-rc3"><span class="ng-binding ng-scope">
+  Release 0.10.1-rc3
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.8" ng-click="focusSection()" tabindex="0" href="/0.9.8"><span class="ng-binding ng-scope">
+  Release 0.9.8
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.7" ng-click="focusSection()" tabindex="0" href="/0.9.7"><span class="ng-binding ng-scope">
+  Release 0.9.7
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.6" ng-click="focusSection()" tabindex="0" href="/0.9.6"><span class="ng-binding ng-scope">
+  Release 0.9.6
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.5" ng-click="focusSection()" tabindex="0" href="/0.9.5"><span class="ng-binding ng-scope">
+  Release 0.9.5
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.4" ng-click="focusSection()" tabindex="0" href="/0.9.4"><span class="ng-binding ng-scope">
+  Release 0.9.4
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.3" ng-click="focusSection()" tabindex="0" href="/0.9.3"><span class="ng-binding ng-scope">
+  Release 0.9.3
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="/0.9.0" ng-click="focusSection()" tabindex="0" href="/0.9.0"><span class="ng-binding ng-scope">
+  Release 0.9.0
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children -->
+          </ul><!-- end ngIf: section.children -->
+        </li><!-- end ngRepeat: section in menu.sections --><li ng-repeat="section in menu.sections" class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <!-- ngIf: section.type === 'heading' -->
+          <!-- ngIf: section.type === 'link' --><menu-link section="section" ng-if="section.type === 'link'" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/getting-started" ng-click="focusSection()" tabindex="0" href="#/getting-started"><span class="ng-binding ng-scope">
+  Getting Started
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link><!-- end ngIf: section.type === 'link' -->
+
+          <!-- ngIf: section.type === 'toggle' -->
+
+          <!-- ngIf: section.children -->
+        </li><!-- end ngRepeat: section in menu.sections --><li ng-repeat="section in menu.sections" class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <!-- ngIf: section.type === 'heading' -->
+          <!-- ngIf: section.type === 'link' -->
+
+          <!-- ngIf: section.type === 'toggle' --><menu-toggle section="section" ng-if="section.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-Demos" aria-expanded="false" tabindex="0">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Demos
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-Demos" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.autocomplete" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.autocomplete"><span class="ng-binding ng-scope">
+  Autocomplete
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.bottomSheet" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.bottomSheet"><span class="ng-binding ng-scope">
+  Bottom Sheet
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.button" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.button"><span class="ng-binding ng-scope">
+  Button
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.card" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.card"><span class="ng-binding ng-scope">
+  Card
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.checkbox" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.checkbox"><span class="ng-binding ng-scope">
+  Checkbox
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.chips" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.chips"><span class="ng-binding ng-scope">
+  Chips
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.content" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.content"><span class="ng-binding ng-scope">
+  Content
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.dialog" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.dialog"><span class="ng-binding ng-scope">
+  Dialog
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.divider" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.divider"><span class="ng-binding ng-scope">
+  Divider
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.fabSpeedDial" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.fabSpeedDial"><span class="ng-binding ng-scope">
+  FAB Speed Dial
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.fabToolbar" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.fabToolbar"><span class="ng-binding ng-scope">
+  FAB Toolbar
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.gridList" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.gridList"><span class="ng-binding ng-scope">
+  Grid List
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.icon" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.icon"><span class="ng-binding ng-scope">
+  Icon
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.input" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.input"><span class="ng-binding ng-scope">
+  Input
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.list" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.list"><span class="ng-binding ng-scope">
+  List
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.menu" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.menu"><span class="ng-binding ng-scope">
+  Menu
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.progressCircular" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.progressCircular"><span class="ng-binding ng-scope">
+  Progress Circular
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.progressLinear" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.progressLinear"><span class="ng-binding ng-scope">
+  Progress Linear
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.radioButton" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.radioButton"><span class="ng-binding ng-scope">
+  Radio Button
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.select" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.select"><span class="ng-binding ng-scope">
+  Select
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.sidenav" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.sidenav"><span class="ng-binding ng-scope">
+  Sidenav
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.slider" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.slider"><span class="ng-binding ng-scope">
+  Slider
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.subheader" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.subheader"><span class="ng-binding ng-scope">
+  Subheader
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.swipe" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.swipe"><span class="ng-binding ng-scope">
+  Swipe
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.switch" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.switch"><span class="ng-binding ng-scope">
+  Switch
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.tabs" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.tabs"><span class="ng-binding ng-scope">
+  Tabs
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.toast" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.toast"><span class="ng-binding ng-scope">
+  Toast
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.toolbar" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.toolbar"><span class="ng-binding ng-scope">
+  Toolbar
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.tooltip" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.tooltip"><span class="ng-binding ng-scope">
+  Tooltip
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/demo/material.components.whiteframe" ng-click="focusSection()" tabindex="0" href="#/demo/material.components.whiteframe"><span class="ng-binding ng-scope">
+  Whiteframe
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: section.type === 'toggle' -->
+
+          <!-- ngIf: section.children -->
+        </li><!-- end ngRepeat: section in menu.sections --><li ng-repeat="section in menu.sections" class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <!-- ngIf: section.type === 'heading' --><h2 class="menu-heading md-subhead ng-binding ng-scope" ng-if="section.type === 'heading'" id="heading_Customization">
+            Customization
+          </h2><!-- end ngIf: section.type === 'heading' -->
+          <!-- ngIf: section.type === 'link' -->
+
+          <!-- ngIf: section.type === 'toggle' -->
+
+          <!-- ngIf: section.children --><ul ng-if="section.children" class="menu-nested-list ng-scope">
+            <!-- ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-CSS" aria-expanded="false" tabindex="0" aria-describedby="heading_Customization">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    CSS
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-CSS" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/CSS/typography" ng-click="focusSection()" tabindex="0" href="#/CSS/typography"><span class="ng-binding ng-scope">
+  Typography
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/CSS/button" ng-click="focusSection()" tabindex="0" href="#/CSS/button"><span class="ng-binding ng-scope">
+  Button
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-Theming" aria-expanded="false" tabindex="0" aria-describedby="heading_Customization">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Theming
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-Theming" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/Theming/01_introduction" ng-click="focusSection()" tabindex="0" href="#/Theming/01_introduction"><span class="ng-binding ng-scope">
+  Introduction and Terms
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/Theming/02_declarative_syntax" ng-click="focusSection()" tabindex="0" href="#/Theming/02_declarative_syntax"><span class="ng-binding ng-scope">
+  Declarative Syntax
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/Theming/03_configuring_a_theme" ng-click="focusSection()" tabindex="0" href="#/Theming/03_configuring_a_theme"><span class="ng-binding ng-scope">
+  Configuring a Theme
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/Theming/04_multiple_themes" ng-click="focusSection()" tabindex="0" href="#/Theming/04_multiple_themes"><span class="ng-binding ng-scope">
+  Multiple Themes
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children -->
+          </ul><!-- end ngIf: section.children -->
+        </li><!-- end ngRepeat: section in menu.sections --><li ng-repeat="section in menu.sections" class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <!-- ngIf: section.type === 'heading' --><h2 class="menu-heading md-subhead ng-binding ng-scope" ng-if="section.type === 'heading'" id="heading_APIReference">
+            API Reference
+          </h2><!-- end ngIf: section.type === 'heading' -->
+          <!-- ngIf: section.type === 'link' -->
+
+          <!-- ngIf: section.type === 'toggle' -->
+
+          <!-- ngIf: section.children --><ul ng-if="section.children" class="menu-nested-list ng-scope">
+            <!-- ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-Layout" aria-expanded="false" tabindex="0" aria-describedby="heading_APIReference">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Layout
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-Layout" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/layout/container" ng-click="focusSection()" tabindex="0" href="#/layout/container"><span class="ng-binding ng-scope">
+  Container Elements
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/layout/grid" ng-click="focusSection()" tabindex="0" href="#/layout/grid"><span class="ng-binding ng-scope">
+  Grid System
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/layout/alignment" ng-click="focusSection()" tabindex="0" href="#/layout/alignment"><span class="ng-binding ng-scope">
+  Child Alignment
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/layout/options" ng-click="focusSection()" tabindex="0" href="#/layout/options"><span class="ng-binding ng-scope">
+  Options
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-Services" aria-expanded="false" tabindex="0" aria-describedby="heading_APIReference">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Services
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-Services" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.bottomSheet/service/$mdBottomSheet" ng-click="focusSection()" tabindex="0" href="#/api/material.components.bottomSheet/service/$mdBottomSheet"><span class="ng-binding ng-scope">
+  $mdBottomSheet
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.dialog/service/$mdDialog" ng-click="focusSection()" tabindex="0" href="#/api/material.components.dialog/service/$mdDialog"><span class="ng-binding ng-scope">
+  $mdDialog
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.icon/service/$mdIcon" ng-click="focusSection()" tabindex="0" href="#/api/material.components.icon/service/$mdIcon"><span class="ng-binding ng-scope">
+  $mdIcon
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.icon/service/$mdIconProvider" ng-click="focusSection()" tabindex="0" href="#/api/material.components.icon/service/$mdIconProvider"><span class="ng-binding ng-scope">
+  $mdIconProvider
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.core/service/$mdMedia" ng-click="focusSection()" tabindex="0" href="#/api/material.core/service/$mdMedia"><span class="ng-binding ng-scope">
+  $mdMedia
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.sidenav/service/$mdSidenav" ng-click="focusSection()" tabindex="0" href="#/api/material.components.sidenav/service/$mdSidenav"><span class="ng-binding ng-scope">
+  $mdSidenav
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.toast/service/$mdToast" ng-click="focusSection()" tabindex="0" href="#/api/material.components.toast/service/$mdToast"><span class="ng-binding ng-scope">
+  $mdToast
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children --><li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}" class="ng-scope">
+              <!-- ngIf: child.type === 'link' -->
+
+              <!-- ngIf: child.type === 'toggle' --><menu-toggle section="child" ng-if="child.type === 'toggle'" class="ng-scope ng-isolate-scope"><button class="md-button-toggle md-button md-default-theme" ng-transclude="" ng-click="toggle()" aria-controls="docs-menu-Directives" aria-expanded="false" tabindex="0" aria-describedby="heading_APIReference">
+  <div flex="" layout="row" class="ng-binding ng-scope">
+    Directives
+    <span flex=""></span>
+    <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
+      <md-icon md-svg-src="md-toggle-arrow" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg></md-icon>
+    </span>
+  </div>
+  <span class="md-visually-hidden ng-binding ng-scope">
+    Toggle collapsed
+  </span>
+</button>
+
+<ul id="docs-menu-Directives" class="menu-toggle-list" style="height: 0px;">
+  <!-- ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.autocomplete/directive/mdAutocomplete" ng-click="focusSection()" tabindex="0" href="#/api/material.components.autocomplete/directive/mdAutocomplete"><span class="ng-binding ng-scope">
+  md-autocomplete
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.button/directive/mdButton" ng-click="focusSection()" tabindex="0" href="#/api/material.components.button/directive/mdButton"><span class="ng-binding ng-scope">
+  md-button
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.card/directive/mdCard" ng-click="focusSection()" tabindex="0" href="#/api/material.components.card/directive/mdCard"><span class="ng-binding ng-scope">
+  md-card
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.checkbox/directive/mdCheckbox" ng-click="focusSection()" tabindex="0" href="#/api/material.components.checkbox/directive/mdCheckbox"><span class="ng-binding ng-scope">
+  md-checkbox
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.chips/directive/mdChip" ng-click="focusSection()" tabindex="0" href="#/api/material.components.chips/directive/mdChip"><span class="ng-binding ng-scope">
+  md-chip
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.chips/directive/mdChipRemove" ng-click="focusSection()" tabindex="0" href="#/api/material.components.chips/directive/mdChipRemove"><span class="ng-binding ng-scope">
+  md-chip-remove
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.chips/directive/mdChips" ng-click="focusSection()" tabindex="0" href="#/api/material.components.chips/directive/mdChips"><span class="ng-binding ng-scope">
+  md-chips
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.chips/directive/mdContactChips" ng-click="focusSection()" tabindex="0" href="#/api/material.components.chips/directive/mdContactChips"><span class="ng-binding ng-scope">
+  md-contact-chips
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.content/directive/mdContent" ng-click="focusSection()" tabindex="0" href="#/api/material.components.content/directive/mdContent"><span class="ng-binding ng-scope">
+  md-content
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.divider/directive/mdDivider" ng-click="focusSection()" tabindex="0" href="#/api/material.components.divider/directive/mdDivider"><span class="ng-binding ng-scope">
+  md-divider
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.gridList/directive/mdGridList" ng-click="focusSection()" tabindex="0" href="#/api/material.components.gridList/directive/mdGridList"><span class="ng-binding ng-scope">
+  md-grid-list
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.gridList/directive/mdGridTile" ng-click="focusSection()" tabindex="0" href="#/api/material.components.gridList/directive/mdGridTile"><span class="ng-binding ng-scope">
+  md-grid-tile
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.autocomplete/directive/mdHighlightText" ng-click="focusSection()" tabindex="0" href="#/api/material.components.autocomplete/directive/mdHighlightText"><span class="ng-binding ng-scope">
+  md-highlight-text
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.icon/directive/mdIcon" ng-click="focusSection()" tabindex="0" href="#/api/material.components.icon/directive/mdIcon"><span class="ng-binding ng-scope">
+  md-icon
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.input/directive/mdInput" ng-click="focusSection()" tabindex="0" href="#/api/material.components.input/directive/mdInput"><span class="ng-binding ng-scope">
+  md-input
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.input/directive/mdInputContainer" ng-click="focusSection()" tabindex="0" href="#/api/material.components.input/directive/mdInputContainer"><span class="ng-binding ng-scope">
+  md-input-container
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.list/directive/mdList" ng-click="focusSection()" tabindex="0" href="#/api/material.components.list/directive/mdList"><span class="ng-binding ng-scope">
+  md-list
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.list/directive/mdListItem" ng-click="focusSection()" tabindex="0" href="#/api/material.components.list/directive/mdListItem"><span class="ng-binding ng-scope">
+  md-list-item
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.menu/directive/mdMenu" ng-click="focusSection()" tabindex="0" href="#/api/material.components.menu/directive/mdMenu"><span class="ng-binding ng-scope">
+  md-menu
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.progressCircular/directive/mdProgressCircular" ng-click="focusSection()" tabindex="0" href="#/api/material.components.progressCircular/directive/mdProgressCircular"><span class="ng-binding ng-scope">
+  md-progress-circular
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.progressLinear/directive/mdProgressLinear" ng-click="focusSection()" tabindex="0" href="#/api/material.components.progressLinear/directive/mdProgressLinear"><span class="ng-binding ng-scope">
+  md-progress-linear
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.radioButton/directive/mdRadioButton" ng-click="focusSection()" tabindex="0" href="#/api/material.components.radioButton/directive/mdRadioButton"><span class="ng-binding ng-scope">
+  md-radio-button
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.radioButton/directive/mdRadioGroup" ng-click="focusSection()" tabindex="0" href="#/api/material.components.radioButton/directive/mdRadioGroup"><span class="ng-binding ng-scope">
+  md-radio-group
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.select/directive/mdSelect" ng-click="focusSection()" tabindex="0" href="#/api/material.components.select/directive/mdSelect"><span class="ng-binding ng-scope">
+  md-select
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.sidenav/directive/mdSidenav" ng-click="focusSection()" tabindex="0" href="#/api/material.components.sidenav/directive/mdSidenav"><span class="ng-binding ng-scope">
+  md-sidenav
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.sidenav/directive/mdSidenavFocus" ng-click="focusSection()" tabindex="0" href="#/api/material.components.sidenav/directive/mdSidenavFocus"><span class="ng-binding ng-scope">
+  md-sidenav-focus
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.slider/directive/mdSlider" ng-click="focusSection()" tabindex="0" href="#/api/material.components.slider/directive/mdSlider"><span class="ng-binding ng-scope">
+  md-slider
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.subheader/directive/mdSubheader" ng-click="focusSection()" tabindex="0" href="#/api/material.components.subheader/directive/mdSubheader"><span class="ng-binding ng-scope">
+  md-subheader
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.swipe/directive/mdSwipeLeft" ng-click="focusSection()" tabindex="0" href="#/api/material.components.swipe/directive/mdSwipeLeft"><span class="ng-binding ng-scope">
+  md-swipe-left
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.swipe/directive/mdSwipeRight" ng-click="focusSection()" tabindex="0" href="#/api/material.components.swipe/directive/mdSwipeRight"><span class="ng-binding ng-scope">
+  md-swipe-right
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.switch/directive/mdSwitch" ng-click="focusSection()" tabindex="0" href="#/api/material.components.switch/directive/mdSwitch"><span class="ng-binding ng-scope">
+  md-switch
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.tabs/directive/mdTab" ng-click="focusSection()" tabindex="0" href="#/api/material.components.tabs/directive/mdTab"><span class="ng-binding ng-scope">
+  md-tab
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.tabs/directive/mdTabs" ng-click="focusSection()" tabindex="0" href="#/api/material.components.tabs/directive/mdTabs"><span class="ng-binding ng-scope">
+  md-tabs
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.toolbar/directive/mdToolbar" ng-click="focusSection()" tabindex="0" href="#/api/material.components.toolbar/directive/mdToolbar"><span class="ng-binding ng-scope">
+  md-toolbar
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages --><li ng-repeat="page in section.pages" class="ng-scope">
+    <menu-link section="page" class="ng-isolate-scope"><a class="md-button md-default-theme" ng-transclude="" ng-class="{'active' : isSelected()}" ng-href="#/api/material.components.tooltip/directive/mdTooltip" ng-click="focusSection()" tabindex="0" href="#/api/material.components.tooltip/directive/mdTooltip"><span class="ng-binding ng-scope">
+  md-tooltip
+  </span><!-- ngIf: isSelected() -->
+</a>
+</menu-link>
+  </li><!-- end ngRepeat: page in section.pages -->
+</ul>
+</menu-toggle><!-- end ngIf: child.type === 'toggle' -->
+            </li><!-- end ngRepeat: child in section.children -->
+          </ul><!-- end ngIf: section.children -->
+        </li><!-- end ngRepeat: section in menu.sections -->
+      </ul>
+    </md-content>
+  </md-sidenav>

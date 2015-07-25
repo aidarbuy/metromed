@@ -22,43 +22,48 @@ html {
   padding: 0.2em 0;
 }
 
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
-}
-
 md-toolbar.md-default-theme {
   background-color: #2cbfd9;
 }
 
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
+.md-button.md-icon-button.menuBtn {
+  margin-top: 9px;
+  margin-right: 0;
 }
 
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 50px;
-    }
-  }
+.muppet-list .md-button {
+  // background-color: cyan;
+  margin: 0;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
+.muppet-list .selected {
+  color: #03a9f4;
+}
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin: 4px 16px; 
+  vertical-align: middle;
+  width: 48px;
+}
+.content-wrapper {
+  position: relative;
+}
+#primary-col {
+  overflow: hidden;
+}
+#primary-col .md-button {
+  margin: 8px auto 16px 0;
+}
+#primary-col .cell {
+  flex: 1 1 auto;
+}
+#primary-col img {
+  display: block;
+  max-width: 100%;
 }
 
 /**
