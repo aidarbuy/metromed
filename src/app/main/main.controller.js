@@ -1,34 +1,27 @@
 class MainController {
-  constructor ($timeout, webDevTec, toastr) {
-    'ngInject';
+	constructor () {
+		'ngInject';
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1437762977054;
-    this.toastr = toastr;
+		// Create list of font-icon names with color overrides
+		var iconData = [
+			{name: 'icon-home'        , color: "#777" },
+			{name: 'icon-user-plus'   , color: "rgb(89, 226, 168)" },
+			{name: 'icon-google-plus2', color: "#A00" },
+			{name: 'icon-youtube4'    , color:"#00A" },
+			// Use theming to color the font-icon
+			{name: 'icon-settings'    , color:"#A00", theme:"md-warn md-hue-5"}
+		];
 
-    this.activate($timeout, webDevTec);
-  }
+		// Create a set of sizes...
+		this.sizes = [
+			{size:48,padding:10},
+			{size:36,padding:6},
+			{size:21,padding:2},
+			{size:12,padding:0}
+		];
 
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
-  }
-
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
-    });
-  }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
-  }
+		this.fonts = [].concat(iconData);
+	}
 }
 
 export default MainController;
