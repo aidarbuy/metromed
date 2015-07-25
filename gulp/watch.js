@@ -12,7 +12,9 @@ function isOnlyChange(event) {
 
 gulp.task('watch', ['scripts:watch', 'markups', 'inject'], function () {
 
-  gulp.watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject']);
+  gulp.watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject'], function(event) {
+    browserSync.reload(event.path);
+  });
 
   gulp.watch([
     path.join(conf.paths.src, '/app/**/*.css'),
@@ -28,7 +30,7 @@ gulp.task('watch', ['scripts:watch', 'markups', 'inject'], function () {
 
   gulp.watch(path.join(conf.paths.src, '/app/**/*.jade'), ['markups']);
 
-  gulp.watch(path.join(conf.paths.src, '/**/*.html'), function(event) {
+  gulp.watch(path.join(conf.paths.src, '/app/**/*.html'), function(event) {
     browserSync.reload(event.path);
   });
 });
