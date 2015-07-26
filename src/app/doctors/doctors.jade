@@ -3,10 +3,28 @@ header
 	acme-navbar
 
 main
+md-content.md-padding
 	md-card
 		md-card-content
 			h1 Doctors
-			h1 {{ doctors.testMsg }}
+			//- h1 {{ doctors.testMsg }}
+
+
+	//- md-card(ng-repeat="doctor in doctors.doctors")
+		md-card-title {{ doctor.firstname + " " + doctor.lastname }}
+
+
+	md-card(ng-repeat="doctor in doctors.doctors")
+		img(ng-src="assets/{{ doctor.img.href.src }}" class="md-card-image" alt="photo of doctor {{ doctor.firstname + ' ' + doctor.lastname }}")
+		md-card-content
+			h2.md-title {{ doctor.firstname + " " + doctor.lastname }}
+			p {{ doctor.description }}
+
+		div.md-actions(layout="row" layout-align="end center")
+			md-button Read more
+			//- md-button Action 2
+		br
+
 
 //- Footer
 footer
