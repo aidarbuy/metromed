@@ -1,0 +1,3 @@
+.md-toolbar-tools(ng-controller="NavbarController as vm")
+	md-tabs
+		md-tab(ng-repeat="item in vm.menuItems") {{ item.name }}
