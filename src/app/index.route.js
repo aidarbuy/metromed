@@ -1,4 +1,4 @@
-function routerConfig ($stateProvider, $urlRouterProvider, $routeProvider) {
+function routerConfig ($stateProvider, $urlRouterProvider) {
   'ngInject';
 
   $stateProvider
