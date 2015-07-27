@@ -1,12 +1,40 @@
 //- Header
-header
+//- header
 	acme-navbar
 
-main
-	md-card
-		md-card-content
-			h1 Services
-			h1 {{ services.testMsg }}
+md-content
+	//- h1.md-display-3 Services
+
+style.
+	.price-card {
+		//- background:red;
+		border: 1px solid #dddddd;
+		padding: 10px;
+	}
+	.price-outer:before, .price-outer:after {
+		background: none repeat scroll 0 0 #eeeeee;
+		content: "";
+		display: block;
+		height: 1px;
+		left: 14%;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 72%;
+	}
+	.price {
+		color: #2cbfd9;
+	}
+
+h2.md-accent.md-display-1 School Physicals
+.price-outer
+	.price.md-display-4 $20
+	.md-headline ONE TIME FEE
+md-list.md-headline
+	md-list-item Until August 31
+	md-list-item Vision Screening
+	md-list-item Immunization verification
+	md-list-item Scoliosis Screening
 
 //- Footer
 footer
