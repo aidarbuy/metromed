@@ -21,7 +21,7 @@ import FooterDirective from '../app/components/footer/footer.directive';
 // import ToolbarController from '../app/components/navbar/toolbar.controller';
 import MalarkeyDirective from '../app/components/malarkey/malarkey.directive';
 
-angular.module('metromed', ['ngRoute', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'uiGmapgoogle-maps'])
+angular.module('metromed', ['ngRoute', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'uiGmapgoogle-maps', 'ngMdIcons'])
   .constant('malarkey', malarkey)
   .constant('toastr', toastr)
   .constant('moment', moment)

@@ -18,7 +18,7 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
       url: '/services',
       templateUrl: 'app/services/services.html',
       controller: 'ServicesController',
-      controllerAs: 'services'
+      controllerAs: 'srv'
     })
     .state('doctors', {
       url: '/doctors',

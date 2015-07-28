@@ -1,12 +1,27 @@
-h2.md-accent.md-display-1 School Physicals
-.price-outer
-	.price.md-display-4 $20
-	.md-headline ONE TIME FEE
-md-list.md-headline
-	md-list-item Until August 31
-	md-list-item Vision Screening
-	md-list-item Immunization verification
-	md-list-item Scoliosis Screening
+//- Mobile
+div(layout="column" layout-align="space-around" hide-gt-md)
+	div(flex)(ng-repeat="p in srv.prices")
+		md-card.price-card-outer
+			.price-card-inner
+				h2.md-display-1 {{ p.title }}
+				.price
+					.md-display-4 ${{ p.price }}
+					.md-headline ONE TIME FEE
+				ul.md-headline
+					li(ng-repeat="li in p.list") {{ li }}
+
+//- Desktop
+div(layout="row" layout-align="space-around" hide-sm hide-md)
+	div(flex)(ng-repeat="p in srv.prices")
+		md-card.price-card-outer
+			.price-card-inner
+				h2.md-headline {{ p.title }}
+				.price
+					.md-display-4 ${{ p.price }}
+					.md-headline ONE TIME FEE
+				ul.md-title
+					li(ng-repeat="li in p.list") {{ li }}
+
 
 //- Footer
 footer
