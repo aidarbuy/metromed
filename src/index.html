@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title ng-controller="NavController as nav">{{ nav.getTitle() }} - MetroMed UC</title>
 		<meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<meta name="viewport" content="width=device-width">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -72,7 +73,7 @@
 			<!-- T O O L B A R -->
 			<md-toolbar ng-show="!showSearch">
 				<div class="md-toolbar-tools">
-					<md-button ng-click="nav.toggleSidenav('left')" hide-gt-sm aria-label="Menu">
+					<md-button ng-click="nav.toggleSidenav('left')" hide-gt-md aria-label="Menu">
 						<ng-md-icon icon="menu"></ng-md-icon>
 					</md-button>
 					<h2>MetroMed Urgent Care</h2>
@@ -88,7 +89,7 @@
 
 				<!-- T A B S   M E N U -->
 				<!-- <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex" hide-sm> -->
-				<md-tabs md-stretch-tabs md-selected="selectedIndex" hide-sm>
+				<md-tabs md-stretch-tabs md-selected="selectedIndex" hide-sm hide-md>
 					<!-- <md-tab id="tab1" aria-controls="tab1-content">Latest</md-tab> -->
 					<!-- <md-tab id="tab2" aria-controls="tab2-content">Favorites</md-tab> -->
 					<md-tab label="Home"></md-tab>
