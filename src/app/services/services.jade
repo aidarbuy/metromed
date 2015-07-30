@@ -1,6 +1,6 @@
 //- Mobile
 div(layout="column" layout-align="space-around" hide-gt-md)
-	div(flex)(ng-repeat="p in srv.prices")
+	div(flex ng-repeat="p in srv.prices")
 		md-card.price-card-outer
 			.price-card-inner
 				h2.md-display-1 {{ p.title }}
@@ -12,7 +12,7 @@ div(layout="column" layout-align="space-around" hide-gt-md)
 
 //- Desktop
 div(layout="row" layout-align="space-around" hide-sm hide-md)
-	div(flex)(ng-repeat="p in srv.prices")
+	div(flex ng-repeat="p in srv.prices")
 		md-card.price-card-outer
 			.price-card-inner
 				h2.md-headline {{ p.title }}

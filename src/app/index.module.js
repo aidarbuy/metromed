@@ -14,7 +14,9 @@ import VirtualTourController from './virtual/tour.controller';
 import GithubContributorService from '../app/components/githubContributor/githubContributor.service';
 import WebDevTecService from '../app/components/webDevTec/webDevTec.service';
 import NavbarDirective from '../app/components/navbar/navbar.directive';
+import UserAvatarDirective from '../app/components/navbar/avatar.directive';
 import NavController from '../app/components/navbar/nav.controller';
+import ListBottomSheetCtrl from '../app/components/navbar/bottom.controller';
 import TabsmenuDirective from '../app/components/tabsmenu/tabsmenu.directive';
 import LoremIpsumDirective from '../app/components/lorem-ipsum/ipsum.directive';
 import FooterDirective from '../app/components/footer/footer.directive';
@@ -40,7 +42,9 @@ angular.module('metromed', ['ngRoute', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngS
   .controller('MapController', MapController)
   .controller('VirtualTourController', VirtualTourController)
   .controller('NavController', NavController)
+  .controller('ListBottomSheetCtrl', ListBottomSheetCtrl)
   .directive('acmeNavbar', () => new NavbarDirective())
+  .directive('userAvatar', () => new UserAvatarDirective())
   .directive('tabsMenu', () => new TabsmenuDirective())
   .directive('loremIpsum', () => new LoremIpsumDirective())
   .directive('acmeFooter', () => new FooterDirective())

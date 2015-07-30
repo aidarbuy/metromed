@@ -2,11 +2,22 @@
 //- header
 	acme-navbar
 
-main
-	md-card
-		md-card-content
-			//- h1 About Us
-			h1 {{ about.testMsg }}
+div(layout="column" layout-align="space-around")
+md-card
+	md-card-content
+		h1.md-display-2 {{ about.welcome.title }}
+		h2.md-headline {{ about.welcome.conditions.header }}
+		//- ul.md-headline
+			li(ng-repeat="item in about.welcome.conditions.list") {{ item }}
+
+md-card
+	md-card-content {{ about.whyMetroMed.title }}
+
+//- p.md-body-2 Body copy with medium weight.
+//- md-button Button
+//- p.md-body-1 Regular body copy
+//- small.md-caption with small text
+//- span.md-caption Caption
 
 //- Footer
 footer
