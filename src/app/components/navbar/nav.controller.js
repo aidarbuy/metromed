@@ -4,32 +4,62 @@ class NavController {
 
 		this.menu = [
 			{
-				link : '',
-				title: 'Dashboard',
-				icon: 'dashboard'
+				state : '',
+				title: 'Home',
+				icon: 'home'
 			},
 			{
-				link : '',
-				title: 'Friends',
-				icon: 'group'
+				state : '',
+				title: 'About Us',
+				icon: 'info'
 			},
 			{
-				link : '',
-				title: 'Messages',
-				icon: 'message'
+				state : '',
+				title: 'Services',
+				icon: 'local_hospital'
+				// icon: 'add_shopping_cart'
+			},
+			{
+				state : '',
+				title: 'Doctors',
+				icon: 'people'
+			},
+			{
+				state : '',
+				title: 'Primary Care',
+				icon: 'verified_user'
+			},
+			{
+				state : '',
+				title: 'Map',
+				// icon: 'explore'
+				icon: 'map'
+				// icon: 'room'
+			},
+			{
+				state : '',
+				title: 'Virtual Tour',
+				icon: 'visibility'
 			}
 		];
 
 		this.admin = [
 			{
 				link : '',
-				title: 'Trash',
-				icon: 'delete'
+				title: '952 Edwards Ferry Road NE Leesburg VA 20176',
+				icon: 'room'
 			},
 			{
-				link : 'showListBottomSheet($event)',
-				title: 'Settings',
-				icon: 'settings'
+				// link : 'showListBottomSheet($event)',
+				link : 'tel:(703) 687-4158',
+				title: '(703) 687-4158',
+				icon: 'call'
+			},
+			{
+				// link : 'showListBottomSheet($event)',
+				link : 'mailto:info@metromeduc.com',
+				title: 'info@metromeduc.com',
+				icon: 'email'
 			}
 		];
 

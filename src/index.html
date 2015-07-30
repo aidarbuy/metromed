@@ -25,7 +25,7 @@
 		<![endif]-->
 
 
-		<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('sm')">
+		<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 			<md-toolbar class="md-tall md-hue-2">
 				<span flex></span>
 				<div layout="column" class="md-toolbar-tools-bottom inset">
@@ -35,12 +35,13 @@
 					<div>info@metromeduc.com</div>
 				</div>
 			</md-toolbar>
+			<!-- Main Menu -->
 			<md-list>
 				<md-list-item ng-repeat="item in nav.menu">
-					<a>
+					<a ui-sref="{{ item.state }}">
 						<md-item-content md-ink-ripple layout="row" layout-align="start center">
 							<div class="inset">
-								<ng-md-icon icon="{{ item.icon }}"></ng-md-icon>
+								<ng-md-icon icon="{{ item.icon }}" style="fill:#2cbfd9" ng-attr-style="fill:#2cbfd9"></ng-md-icon>
 							</div>
 							<div class="inset">{{ item.title }}</div>
 						</md-item-content>
@@ -190,6 +191,5 @@
 		<!-- angular templates will be automatically converted in js and inserted here -->
 		<!-- endinject -->
 		<!-- endbuild -->
-		<script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
 	</body>
 </html>
