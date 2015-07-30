@@ -20,7 +20,7 @@ function config ($logProvider, toastr, $mdThemingProvider, uiGmapGoogleMapApiPro
 		.accentPalette('pink');
 
 	$mdThemingProvider.theme('input', 'default')
-		.primaryPalette('grey')
+		.primaryPalette('grey');
 
 
 	// Extend the light-blue theme with a few different colors

@@ -1,43 +1,72 @@
 class NavController {
-	constructor ($location, $mdSidenav, $mdBottomSheet, $mdDialog) {
+	constructor ($scope, $location, $mdSidenav, $mdBottomSheet, $mdDialog) {
 		'ngInject';
+
+		this.selectedIndex = 0;
+
+		$scope.$watch('selectedIndex', function(current, old) {
+			switch (current) {
+				case 0:
+					$location.url("/");
+					break;
+				case 1:
+					$location.url("/about");
+					break;
+				case 2:
+					$location.url("/services");
+					break;
+				case 3:
+					$location.url("/doctors");
+					break;
+				case 4:
+					$location.url("/primary");
+					break;
+				case 5:
+					$location.url("/map");
+					break;
+				case 6:
+					$location.url("/virtual");
+					break;
+			}
+		});
+
 
 		this.menu = [
 			{
-				state : '',
+				state : 'home',
 				title: 'Home',
 				icon: 'home'
 			},
 			{
-				state : '',
+				state : 'about',
 				title: 'About Us',
 				icon: 'info'
 			},
 			{
-				state : '',
+				state : 'services',
 				title: 'Services',
 				icon: 'local_hospital'
 				// icon: 'add_shopping_cart'
 			},
 			{
-				state : '',
+				state : 'doctors',
 				title: 'Doctors',
 				icon: 'people'
 			},
 			{
-				state : '',
+				state : 'primary',
 				title: 'Primary Care',
 				icon: 'verified_user'
 			},
 			{
-				state : '',
+				state : 'map',
 				title: 'Map',
 				// icon: 'explore'
 				icon: 'map'
 				// icon: 'room'
 			},
 			{
-				state : '',
+				state : 'virtual',
 				title: 'Virtual Tour',
 				icon: 'visibility'
 			}
@@ -136,7 +165,7 @@ class NavController {
 			this.answer = function(answer) {
 				$mdDialog.hide(answer);
 			};
-		};
+		}
 
 
 
