@@ -3,7 +3,40 @@
 	acme-navbar
 
 main
-	md-card
+	//- TOP-SIDEBARS
+	div(layout="row" layout-sm="column")
+		md-card(flex ng-repeat="item in main.topSidebars")
+			md-card-content
+				h2.md-display-2 {{ item.header }}
+				p.md-headline(ng-repeat="p in item.text") {{ p }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//- BUTTONS
+	//- md-card
 		md-card-content
 			div(layout="row" layout-align="center start")
 				div(layout="column")

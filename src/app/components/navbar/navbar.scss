@@ -3,7 +3,26 @@
 }
 
 
+/* Sidenav area */
 
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+  md-list .md-button.selected {
+    color: #03a9f4;
+  }
+
+  md-sidenav  md-list {
+    padding: 0px 0px 8px 0px;
+  }
+
+
+#menu md-list-item:hover {
+	// background-color: #2cbfd9;
+}
 
 $gray: #eee;
 
