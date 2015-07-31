@@ -2,18 +2,28 @@
 //- header
 	acme-navbar
 
-main
-	//- TOP-SIDEBARS
-	div(layout="row" layout-sm="column")
-		md-card(flex ng-repeat="item in main.topSidebars")
-			md-card-content
-				h2.md-display-2 {{ item.header }}
-				p.md-headline(ng-repeat="p in item.text") {{ p }}
+
+//- TOP-SIDEBARS
+div(layout="row" layout-sm="column")
+	md-card(flex ng-repeat="item in main.topSidebars")
+		md-card-content
+			h2.md-display-1 {{ item.header }}
+			p.md-headline(ng-repeat="p in item.text") {{ p }}
+
+//- QUOTE
+md-toolbar(class="md-accent" style="text-align:center")
+	div(flex layout="column" layout-align="center")
+		h2(flex).md-display-2 {{ main.quote.title }}
+		h4(flex).md-headline {{ main.quote.text }}
 
 
-
-
-
+//- CUSTOM SERVICES
+div(layout="row" layout-sm="column")
+	md-card(flex ng-repeat="item in main.customServices")
+		md-card-content(style="text-align:center")
+			ng-md-icon(icon="{{ item.icon }}" style="fill:#2cbfd9;top:6px;" ng-attr-style="fill:#2cbfd9" size="64")
+			h2.md-display-2 {{ item.title }}
+			p.md-headline(ng-repeat="p in item.text") {{ p }}
 
 
 
